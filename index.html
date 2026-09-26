@@ -1,0 +1,761 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <meta name="theme-color" content="#1e4275" />
+  <title>Yudha TanuWijaya — Data Analyst & Investment Analyst & IT Developer</title>
+  <meta name="description" content="Portfolio Yudha TanuWijaya — Data Analyst, Investment Analyst & IT Developer. Open to Work. Subang, Jawa Barat." />
+  <meta name="author" content="Yudha TanuWijaya" />
+  <meta name="keywords" content="Yudha TanuWijaya, Portfolio, Data Analyst, Investment Analyst, IT Developer, Subang" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Yudha TanuWijaya — Portfolio" />
+  <meta property="og:description" content="Turning Data into Insights, Investments into Analysis, and Ideas into Digital Solutions." />
+  <meta property="og:type" content="website" />
+
+  <!-- Preconnect -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdn.tailwindcss.com" />
+
+  <!-- Tailwind -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            navy: {
+              950: '#0a1929',
+              900: '#0f2544',
+              800: '#16335a',
+              700: '#1e4275',
+              600: '#2a5598',
+              500: '#3b6db0',
+            },
+          },
+          fontFamily: {
+            sans: ['Inter', 'Poppins', 'sans-serif'],
+            jp: ['"Noto Sans JP"', 'Inter', 'sans-serif'],
+            display: ['Poppins', 'Inter', 'sans-serif'],
+          },
+          animation: {
+            'float-feather': 'floatFeather 18s linear infinite',
+            'float-feather-slow': 'floatFeatherSlow 28s linear infinite',
+            'float-slow': 'floatSlow 6s ease-in-out infinite',
+            'bird-fly': 'birdFly 35s linear infinite',
+            'spin-slow': 'spin 40s linear infinite',
+            'fade-in-up': 'fadeInUp 0.9s ease-out forwards',
+            'fade-in-left': 'fadeInLeft 0.9s ease-out forwards',
+            'fade-in-right': 'fadeInRight 0.9s ease-out forwards',
+          },
+          keyframes: {
+            floatFeather: {
+              '0%': { transform: 'translate(0, -20vh) rotate(0deg)', opacity: '0' },
+              '10%': { opacity: '0.85' },
+              '90%': { opacity: '0.85' },
+              '100%': { transform: 'translate(80px, 120vh) rotate(540deg)', opacity: '0' },
+            },
+            floatFeatherSlow: {
+              '0%': { transform: 'translate(0, -20vh) rotate(0deg)', opacity: '0' },
+              '15%': { opacity: '0.7' },
+              '85%': { opacity: '0.7' },
+              '100%': { transform: 'translate(-60px, 120vh) rotate(-360deg)', opacity: '0' },
+            },
+            floatSlow: {
+              '0%, 100%': { transform: 'translateY(0)' },
+              '50%': { transform: 'translateY(-12px)' },
+            },
+            birdFly: {
+              '0%': { transform: 'translateX(-5vw) translateY(0)' },
+              '50%': { transform: 'translateX(50vw) translateY(-25px)' },
+              '100%': { transform: 'translateX(105vw) translateY(15px)' },
+            },
+            fadeInUp: {
+              '0%': { opacity: '0', transform: 'translateY(30px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' },
+            },
+            fadeInLeft: {
+              '0%': { opacity: '0', transform: 'translateX(-30px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+            fadeInRight: {
+              '0%': { opacity: '0', transform: 'translateX(30px)' },
+              '100%': { opacity: '1', transform: 'translateX(0)' },
+            },
+          },
+        },
+      },
+    };
+  </script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+JP:wght@300;400;500;700;900&family=Poppins:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,700;1,800;1,900&display=swap" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='16' cy='16' r='14' fill='%231e4275'/%3E%3Cpath d='M16 6a6 6 0 1 0 0 12 6 6 0 0 0 0-12zm0 3a3 3 0 1 1 0 6 3 3 0 0 1 0-6z' fill='white'/%3E%3C/svg%3E" />
+</head>
+
+<body class="bg-[#f4f5f8] text-navy-900 font-sans antialiased overflow-x-hidden intro-active">
+
+  <!-- ============== CINEMATIC OPENING INTRO ============== -->
+  <div id="cinematic-intro">
+    <div class="intro-bg"></div>
+    <div class="intro-grid"></div>
+    <div class="intro-glow"></div>
+
+    <!-- Data particles (JS generated) -->
+    <div id="intro-particles"></div>
+
+    <!-- Data lines (JS generated) -->
+    <div id="intro-lines"></div>
+
+    <!-- Scanline -->
+    <div class="intro-scanline" id="intro-scanline"></div>
+
+    <!-- Words: DATA / FINANCE / TECHNOLOGY -->
+    <div class="intro-words" id="intro-words">
+      <span class="intro-word" data-delay="0">DATA</span>
+      <span class="intro-word" data-delay="200">FINANCE</span>
+      <span class="intro-word" data-delay="400">TECHNOLOGY</span>
+    </div>
+
+    <!-- Anime character -->
+    <div class="intro-char-wrap" id="intro-char">
+      <div class="intro-char-glow"></div>
+      <img src="assets/images/hero/hero-character.jpg" alt="Yudha TanuWijaya" />
+    </div>
+
+    <!-- HUD panels -->
+    <div class="intro-hud" id="intro-hud">
+      <div class="hud-panel hud-tl">
+        <div class="hud-title">Stock Analysis</div>
+        <div class="hud-line"></div>
+        <div class="hud-num">+12.4%</div>
+      </div>
+      <div class="hud-panel hud-tr">
+        <div class="hud-title">Portfolio</div>
+        <div class="hud-line"></div>
+        <div class="hud-num">ROI 8.2%</div>
+      </div>
+      <div class="hud-panel hud-bl">
+        <div class="hud-title">Data Analysis</div>
+        <div class="hud-line"></div>
+        <div class="hud-num">2.4M rows</div>
+      </div>
+      <div class="hud-panel hud-br">
+        <div class="hud-title">Risk / Return</div>
+        <div class="hud-line"></div>
+        <div class="hud-num">Sharpe 1.8</div>
+      </div>
+    </div>
+
+    <!-- Personal branding -->
+    <div class="intro-branding" id="intro-branding">
+      <div class="intro-brand-role" id="intro-role">DATA ANALYST · INVESTMENT ANALYST · IT DEVELOPER</div>
+      <p class="intro-brand-sub" id="intro-sub">Turning Data into Insights, Investments into Analysis, and Ideas into Digital Solutions.</p>
+    </div>
+  </div>
+
+  <!-- ============== SEIGAIHA BACKGROUND PATTERN ============== -->
+  <div class="fixed inset-0 z-0 seigaiha-bg pointer-events-none"></div>
+
+  <!-- ============== FLOATING FEATHERS ============== -->
+  <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden" id="feathers-container"></div>
+
+  <!-- ============== FLYING BIRDS ============== -->
+  <div class="fixed inset-0 z-0 pointer-events-none overflow-hidden">
+    <div class="bird bird-1 animate-bird-fly" style="animation-delay: 0s;">
+      <svg viewBox="0 0 40 20" class="w-10 h-5 text-navy-700/40"><path d="M2 10 Q10 2 20 8 Q30 2 38 10" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+    </div>
+    <div class="bird bird-2 animate-bird-fly" style="animation-delay: 14s; animation-duration: 45s;">
+      <svg viewBox="0 0 40 20" class="w-8 h-4 text-navy-700/30"><path d="M2 10 Q10 2 20 8 Q30 2 38 10" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+    </div>
+  </div>
+
+  <!-- ============== NAVBAR ============== -->
+  <nav class="fixed top-0 left-0 right-0 z-50 bg-[#f4f5f8]/80 backdrop-blur-md border-b border-navy-900/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex items-center justify-between h-14 sm:h-16">
+        <a href="#hero" class="flex items-center gap-2 group">
+          <span class="text-xl sm:text-2xl font-jp font-bold text-navy-700">禅</span>
+          <span class="font-display font-bold text-sm sm:text-lg text-navy-900 tracking-tight">Yudha<span class="text-navy-600">.</span></span>
+        </a>
+
+        <div class="hidden md:flex items-center gap-8">
+          <a href="#hero" class="text-sm font-medium text-navy-800 hover:text-navy-600 transition-colors">Home</a>
+          <a href="#about" class="text-sm font-medium text-navy-800 hover:text-navy-600 transition-colors">About</a>
+          <a href="#skills" class="text-sm font-medium text-navy-800 hover:text-navy-600 transition-colors">Skills</a>
+          <a href="#projects" class="text-sm font-medium text-navy-800 hover:text-navy-600 transition-colors">Projects</a>
+          <a href="#contact" class="px-5 py-2 rounded-full bg-navy-700 text-white text-sm font-medium hover:bg-navy-800 transition-colors shadow-md">Contact</a>
+        </div>
+
+        <button id="menu-toggle" class="md:hidden flex flex-col gap-1.5 p-2 -mr-2" aria-label="Toggle menu">
+          <span class="block w-6 h-0.5 bg-navy-900 transition-all duration-300" id="bar1"></span>
+          <span class="block w-6 h-0.5 bg-navy-900 transition-all duration-300" id="bar2"></span>
+          <span class="block w-6 h-0.5 bg-navy-900 transition-all duration-300" id="bar3"></span>
+        </button>
+      </div>
+    </div>
+
+    <div id="mobile-menu" class="md:hidden hidden bg-[#f4f5f8]/95 backdrop-blur-md border-t border-navy-900/10">
+      <div class="px-4 py-4 flex flex-col gap-1">
+        <a href="#hero" class="mobile-link px-4 py-3 rounded-lg text-navy-800 font-medium hover:bg-navy-50 transition-colors">Home</a>
+        <a href="#about" class="mobile-link px-4 py-3 rounded-lg text-navy-800 font-medium hover:bg-navy-50 transition-colors">About</a>
+        <a href="#skills" class="mobile-link px-4 py-3 rounded-lg text-navy-800 font-medium hover:bg-navy-50 transition-colors">Skills</a>
+        <a href="#projects" class="mobile-link px-4 py-3 rounded-lg text-navy-800 font-medium hover:bg-navy-50 transition-colors">Projects</a>
+        <a href="#contact" class="mobile-link px-4 py-3 rounded-lg bg-navy-700 text-white font-medium text-center mt-2">Contact</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ============== HERO SECTION ============== -->
+  <section id="hero" class="relative min-h-screen flex items-center pt-24 sm:pt-28 lg:pt-20 pb-12 px-4 sm:px-6 lg:px-8 z-10">
+    <div class="max-w-7xl mx-auto w-full">
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-4 items-center relative parallax-layer" data-depth="3">
+
+        <!-- Decorative thin lines -->
+        <svg class="absolute -top-4 -left-4 sm:left-0 w-24 sm:w-32 lg:w-40 text-navy-700/40 hero-anim anim-deco" viewBox="0 0 200 120" fill="none" aria-hidden="true">
+          <path d="M10 10 Q40 30 60 80 Q70 110 90 100" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M30 30 Q50 60 70 110" stroke="currentColor" stroke-width="1"/>
+          <path d="M5 50 Q15 70 25 115" stroke="currentColor" stroke-width="1"/>
+        </svg>
+
+        <svg class="absolute top-4 -right-4 sm:right-0 w-20 sm:w-28 lg:w-36 text-navy-700/40 hero-anim anim-deco" viewBox="0 0 200 120" fill="none" aria-hidden="true">
+          <path d="M10 30 Q40 10 80 30 Q130 50 180 30" stroke="currentColor" stroke-width="1.2"/>
+          <path d="M40 50 Q60 60 80 50" stroke="currentColor" stroke-width="1"/>
+        </svg>
+
+        <!-- LEFT: TEXT -->
+        <div class="lg:col-span-4 text-center lg:text-left order-2 lg:order-1 relative z-20">
+          <!-- Decorative arrow -->
+          <div class="hidden lg:flex items-center gap-2 mb-4 hero-anim anim-1">
+            <span class="font-jp text-xs text-navy-600 tracking-widest">一期一会</span>
+            <span class="block w-10 h-px bg-navy-700/40"></span>
+            <span class="block w-1.5 h-1.5 rounded-full bg-navy-700/60"></span>
+          </div>
+
+          <!-- ICHI-GO ICHI-E italic -->
+          <p class="font-display italic font-extrabold text-base sm:text-lg lg:text-xl text-navy-700 tracking-wide mb-2 hero-anim anim-1">
+            ICHI-GO ICHI-E
+          </p>
+
+          <!-- NAME -->
+          <h1 class="font-display font-black leading-[0.95] mb-3 hero-anim anim-2">
+            <span class="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-navy-900 tracking-tight">YUDHA</span>
+            <span class="block text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-navy-900 tracking-tight">TANUWIJAYA</span>
+          </h1>
+
+          <!-- Role line -->
+          <div class="flex items-center justify-center lg:justify-start gap-2 mb-4 hero-anim anim-3">
+            <span class="block w-6 h-px bg-navy-700"></span>
+            <p class="font-display italic font-bold text-xs sm:text-sm text-navy-700 tracking-widest uppercase">
+              Data Analyst · Investment · IT Developer
+            </p>
+          </div>
+
+          <!-- Description -->
+          <p class="text-xs sm:text-sm text-navy-700/80 leading-relaxed mb-6 max-w-md mx-auto lg:mx-0 hero-anim anim-3">
+            "Satu kali, satu pertemuan." Setiap project adalah kesempatan untuk berkarya dengan hati dan presisi — mengubah data menjadi insight, ide menjadi solusi digital.
+          </p>
+
+          <!-- CTA Buttons -->
+          <div class="flex flex-wrap items-center gap-3 justify-center lg:justify-start hero-anim anim-4">
+            <a href="#contact" class="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-navy-700 text-white font-semibold text-xs sm:text-sm hover:bg-navy-800 transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
+              Hubungi Saya
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M14 5l7 7m0 0l-7 7m7-7H3"/></svg>
+            </a>
+            <a href="#projects" class="inline-flex items-center gap-2 px-5 sm:px-6 py-2.5 sm:py-3 rounded-full bg-white text-navy-800 font-semibold text-xs sm:text-sm border border-navy-700 hover:bg-navy-50 transition-all">
+              Lihat Project
+              <svg class="w-4 h-4" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7"/></svg>
+            </a>
+          </div>
+
+          <!-- Arrow decoration -->
+          <div class="hidden lg:flex items-center gap-1 mt-6 hero-anim anim-5">
+            <svg class="w-5 h-5 text-navy-700/60" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+            <svg class="w-5 h-5 text-navy-700/40 -ml-3" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+          </div>
+        </div>
+
+        <!-- CENTER: ANIME CHARACTER -->
+        <div class="lg:col-span-4 order-1 lg:order-2 flex items-center justify-center hero-anim anim-image">
+          <div class="relative w-full max-w-[280px] sm:max-w-[340px] md:max-w-[380px] lg:max-w-[420px] mx-auto">
+            <!-- Big blue circle behind character -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[85%] h-[85%] rounded-full bg-gradient-to-br from-navy-700 to-navy-800 shadow-2xl shadow-navy-700/30"></div>
+
+            <!-- Subtle ring -->
+            <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[95%] h-[95%] rounded-full border border-navy-700/15"></div>
+
+            <!-- Character -->
+            <div class="relative z-10 animate-float-slow">
+              <img
+                src="assets/images/hero/hero-character.jpg"
+                alt="Yudha TanuWijaya — Anime Character"
+                class="relative z-10 block w-full h-auto object-contain"
+                loading="eager"
+              />
+            </div>
+
+            <!-- Bird decorations -->
+            <svg class="absolute top-4 -left-2 sm:-left-6 w-8 h-4 text-navy-700/50" viewBox="0 0 40 20" aria-hidden="true"><path d="M2 10 Q10 2 20 8 Q30 2 38 10" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+            <svg class="absolute top-12 -right-2 sm:-right-6 w-7 h-3.5 text-navy-700/40" viewBox="0 0 40 20" aria-hidden="true"><path d="M2 10 Q10 2 20 8 Q30 2 38 10" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round"/></svg>
+          </div>
+        </div>
+
+        <!-- RIGHT: META INFO -->
+        <div class="lg:col-span-4 order-3 text-center lg:text-left relative z-20">
+          <div class="hero-anim anim-1 inline-flex lg:block">
+            <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-navy-700 text-navy-700 text-[10px] sm:text-xs font-bold uppercase tracking-widest mb-3 lg:mb-4">
+              <span class="relative flex h-1.5 w-1.5">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-500 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-1.5 w-1.5 bg-green-500"></span>
+              </span>
+              Open to Work
+              <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+            </div>
+          </div>
+
+          <h2 class="hero-anim anim-2 font-display font-black text-6xl sm:text-7xl lg:text-8xl xl:text-9xl text-navy-900 leading-none tracking-tighter mb-3 lg:mb-4">
+            2026
+          </h2>
+
+          <div class="hero-anim anim-3 flex items-center justify-center lg:justify-start gap-2 mb-2">
+            <svg class="w-4 h-4 text-navy-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="2"/></svg>
+            <p class="font-display italic font-extrabold text-base sm:text-lg lg:text-xl text-navy-900 tracking-wider">
+              SUBANG
+            </p>
+          </div>
+          <p class="hero-anim anim-3 text-xs sm:text-sm text-navy-700/70 tracking-wider mb-6">
+            JAWA BARAT, INDONESIA
+          </p>
+
+          <!-- Small stats -->
+          <div class="hero-anim anim-4 hidden lg:flex flex-wrap items-center gap-x-5 gap-y-2 text-[10px] text-navy-700/60 uppercase tracking-widest">
+            <span>© Portfolio 2026</span>
+            <span class="block w-1 h-1 rounded-full bg-navy-700/40"></span>
+            <span>v.1.0</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Scroll indicator -->
+      <a href="#about" class="hidden lg:flex absolute bottom-6 left-1/2 -translate-x-1/2 flex-col items-center gap-2 animate-float-slow text-navy-700/60 hover:text-navy-700 transition-colors group">
+        <span class="text-[10px] tracking-[0.3em] font-bold uppercase">Scroll to Explore</span>
+        <svg class="w-5 h-5 group-hover:translate-y-1 transition-transform" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+      </a>
+      <a href="#about" class="lg:hidden flex justify-center mt-8 text-navy-700">
+        <svg class="w-6 h-6 animate-bounce" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M19 14l-7 7m0 0l-7-7m7 7V3"/></svg>
+      </a>
+    </div>
+  </section>
+
+  <!-- ============== ABOUT ME ============== -->
+  <section id="about" class="relative py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 z-10">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12 sm:mb-16 reveal">
+        <p class="font-jp text-2xl sm:text-3xl text-navy-700 mb-2">私について</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-navy-900">About Me</h2>
+        <div class="mt-4 w-20 h-1 bg-navy-700 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-5 gap-8 lg:gap-12 items-start">
+        <div class="lg:col-span-3 reveal">
+          <div class="bg-white/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 lg:p-10 border border-navy-900/5 shadow-xl">
+            <p class="text-sm sm:text-base lg:text-lg text-navy-700 leading-relaxed mb-4">
+              Halo! Saya <span class="font-semibold text-navy-900">Yudha TanuWijaya</span>, seorang <span class="font-semibold">Data Analyst</span>, <span class="font-semibold">Investment Analyst</span>, dan <span class="font-semibold">IT Developer</span> yang berbasis di Subang, Jawa Barat.
+            </p>
+            <p class="text-sm sm:text-base lg:text-lg text-navy-700 leading-relaxed mb-4">
+              Saya percaya bahwa di balik setiap angka, ada cerita dan peluang yang menanti untuk ditemukan. Dengan keahlian di bidang <span class="font-semibold text-navy-900">Data Analysis</span>, saya membantu mengubah data mentah menjadi insight yang dapat ditindaklanjuti.
+            </p>
+            <p class="text-sm sm:text-base lg:text-lg text-navy-700 leading-relaxed mb-6">
+              Ketertarikan pada <span class="font-semibold text-navy-900">dunia investasi</span> mendorong saya untuk terus mempelajari financial modeling, analisis portofolio, dan manajemen risiko. Latar belakang <span class="font-semibold text-navy-900">IT & Development</span> memungkinkan saya membangun solusi digital end-to-end.
+            </p>
+
+            <div class="flex flex-wrap gap-3 mb-6">
+              <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-green-50 border border-green-200 text-green-700 text-xs sm:text-sm font-medium">
+                <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
+                Open to Work
+              </span>
+              <span class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-navy-50 border border-navy-700 text-navy-700 text-xs sm:text-sm font-medium">
+                <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 13.255A23.931 23.931 0 0112 2c-3.859 0-7.5 1.44-10.255 3.86L12 22l10.255-7.745z"/></svg>
+                Freelance Available
+              </span>
+            </div>
+
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <a href="/assets/cv.pdf" target="_blank" rel="noopener" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-navy-700 text-white font-semibold text-sm hover:bg-navy-800 transition-all shadow-md hover:shadow-lg">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+                Download CV
+              </a>
+              <a href="#contact" class="inline-flex items-center justify-center gap-2 px-5 py-3 rounded-full bg-white text-navy-800 font-semibold text-sm border-2 border-navy-200 hover:border-navy-700 hover:bg-navy-50 transition-all">
+                <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"/></svg>
+                Ajak Diskusi
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="lg:col-span-2 reveal">
+          <div class="space-y-4">
+            <div class="bg-white/80 backdrop-blur-sm rounded-xl p-5 border border-navy-900/5 shadow-lg hover:shadow-xl transition-shadow">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-navy-50 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-navy-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="2"/></svg>
+                </div>
+                <div>
+                  <p class="text-xs text-navy-700/60 font-medium uppercase tracking-wide">Lokasi</p>
+                  <p class="text-sm sm:text-base font-semibold text-navy-900">Subang, Jawa Barat</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white/80 backdrop-blur-sm rounded-xl p-5 border border-navy-900/5 shadow-lg hover:shadow-xl transition-shadow">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-navy-50 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-navy-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+                </div>
+                <div>
+                  <p class="text-xs text-navy-700/60 font-medium uppercase tracking-wide">Fokus</p>
+                  <p class="text-sm sm:text-base font-semibold text-navy-900">Data, Investment &amp; IT</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-white/80 backdrop-blur-sm rounded-xl p-5 border border-navy-900/5 shadow-lg hover:shadow-xl transition-shadow">
+              <div class="flex items-start gap-4">
+                <div class="flex-shrink-0 w-10 h-10 rounded-lg bg-navy-50 flex items-center justify-center">
+                  <svg class="w-5 h-5 text-navy-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                </div>
+                <div>
+                  <p class="text-xs text-navy-700/60 font-medium uppercase tracking-wide">Email</p>
+                  <p class="text-sm sm:text-base font-semibold text-navy-900 break-all">vayneyudha@gmail.com</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="bg-gradient-to-br from-navy-700 to-navy-800 rounded-xl p-5 shadow-lg text-white">
+              <p class="font-jp text-lg mb-1">頑張ります</p>
+              <p class="text-xs opacity-80">Terus belajar &amp; berkembang setiap hari.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== SKILLS & TECH STACK ============== -->
+  <section id="skills" class="relative py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 z-10">
+    <div class="max-w-6xl mx-auto">
+      <div class="reveal mb-10 sm:mb-14">
+        <p class="font-jp text-2xl sm:text-3xl text-navy-700 mb-2">スキル</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-navy-900">Skills &amp; Tech Stack</h2>
+        <div class="mt-4 w-20 h-1 bg-navy-700 rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-start">
+        <!-- LEFT: Counter + description -->
+        <div class="lg:col-span-4 reveal">
+          <div class="bg-white/80 backdrop-blur-sm rounded-3xl p-6 sm:p-8 border border-navy-900/5 shadow-lg h-full flex flex-col">
+            <div class="flex justify-center mb-6">
+              <div class="relative w-44 h-44 sm:w-52 sm:h-52 rounded-full bg-gradient-to-br from-navy-700 to-navy-900 flex flex-col items-center justify-center text-white shadow-xl shadow-navy-900/20">
+                <span class="font-display font-bold text-6xl sm:text-7xl leading-none">16</span>
+                <span class="mt-1 text-xs sm:text-sm tracking-widest text-white/80">TECH STACK</span>
+                <span class="absolute inset-0 rounded-full ring-8 ring-navy-700/10"></span>
+              </div>
+            </div>
+            <p class="text-sm sm:text-base text-navy-700/80 leading-relaxed text-center">
+              Berbekal skill yang teruji, saya biasa menyelesaikan beragam project dan tugas
+              dengan pendekatan <span class="font-semibold text-navy-900">data-driven</span> &
+              teknologi modern untuk hasil yang maksimal.
+            </p>
+          </div>
+        </div>
+
+        <!-- RIGHT: 3 category groups -->
+        <div class="lg:col-span-8 space-y-6 sm:space-y-8">
+
+          <!-- Category: Frontend -->
+          <div class="reveal">
+            <div class="flex items-center justify-between mb-3 sm:mb-4">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-5 sm:h-6 rounded-full bg-navy-700"></span>
+                <h3 class="font-display font-bold text-sm sm:text-base tracking-wider text-navy-900">FRONTEND</h3>
+              </div>
+              <span class="text-[10px] sm:text-xs font-medium text-navy-700/60 tracking-widest">5 SKILLS</span>
+            </div>
+            <div class="grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-3">
+              <div class="tech-card"><div class="tech-icon" style="background:#e34f26;color:#fff;">H5</div><span class="tech-label">HTML5</span></div>
+              <div class="tech-card"><div class="tech-icon" style="background:#1572b6;color:#fff;">C3</div><span class="tech-label">CSS3</span></div>
+              <div class="tech-card"><div class="tech-icon" style="background:#f7df1e;color:#000;">JS</div><span class="tech-label">JavaScript</span></div>
+              <div class="tech-card"><div class="tech-icon" style="background:#61dafb;color:#0b3a55;">⚛</div><span class="tech-label">React</span></div>
+              <div class="tech-card"><div class="tech-icon" style="background:#38bdf8;color:#fff;">🌬</div><span class="tech-label">Tailwind</span></div>
+            </div>
+          </div>
+
+          <!-- Category: Backend & Database -->
+          <div class="reveal">
+            <div class="flex items-center justify-between mb-3 sm:mb-4">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-5 sm:h-6 rounded-full bg-green-700"></span>
+                <h3 class="font-display font-bold text-sm sm:text-base tracking-wider text-navy-900">BACKEND &amp; DATABASE</h3>
+              </div>
+              <span class="text-[10px] sm:text-xs font-medium text-navy-700/60 tracking-widest">3 SKILLS</span>
+            </div>
+            <div class="grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-3">
+              <div class="tech-card"><div class="tech-icon" style="background:#777bb4;color:#fff;">PHP</div><span class="tech-label">PHP</span></div>
+              <div class="tech-card"><div class="tech-icon" style="background:#ff2d20;color:#fff;">L</div><span class="tech-label">Laravel</span></div>
+              <div class="tech-card"><div class="tech-icon" style="background:#4479a1;color:#fff;">My</div><span class="tech-label">MySQL</span></div>
+              <div class="tech-card"><div class="tech-icon" style="background:#336791;color:#fff;">Pg</div><span class="tech-label">PostgreSQL</span></div>
+              <div class="tech-card"><div class="tech-icon" style="background:#000;color:#fff;">N</div><span class="tech-label">Node.js</span></div>
+            </div>
+          </div>
+
+          <!-- Category: Investment -->
+          <div class="reveal">
+            <div class="flex items-center justify-between mb-3 sm:mb-4">
+              <div class="flex items-center gap-2">
+                <span class="w-1.5 h-5 sm:h-6 rounded-full bg-amber-600"></span>
+                <h3 class="font-display font-bold text-sm sm:text-base tracking-wider text-navy-900">INVESTMENT</h3>
+              </div>
+              <span class="text-[10px] sm:text-xs font-medium text-navy-700/60 tracking-widest">5 SKILLS</span>
+            </div>
+            <div class="grid grid-cols-3 sm:grid-cols-5 gap-2 sm:gap-3">
+              <div class="tech-card"><div class="tech-icon" style="background:#f7931a;color:#fff;">₿</div><span class="tech-label">Bitcoin</span></div>
+              <div class="tech-card"><div class="tech-icon" style="background:#e8a200;color:#fff;">BEI</div><span class="tech-label">Saham ID</span></div>
+              <div class="tech-card"><div class="tech-icon" style="background:#1e4275;color:#fff;">US</div><span class="tech-label">Saham US</span></div>
+              <div class="tech-card"><div class="tech-icon" style="background:#0052b4;color:#fff;">⛓</div><span class="tech-label">Blockchain</span></div>
+              <div class="tech-card"><div class="tech-icon" style="background:#9966ff;color:#fff;">📈</div><span class="tech-label">TradingView</span></div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== SELECTED PROJECTS ============== -->
+  <section id="projects" class="relative py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 z-10">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-12 sm:mb-16 reveal">
+        <p class="font-jp text-2xl sm:text-3xl text-navy-700 mb-2">作品</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-navy-900">Selected Projects</h2>
+        <div class="mt-4 w-20 h-1 bg-navy-700 mx-auto rounded-full"></div>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 sm:gap-6 lg:gap-8">
+        <div class="reveal group project-card bg-white/80 backdrop-blur-sm rounded-2xl border border-navy-900/5 shadow-lg transition-all overflow-hidden flex flex-col relative">
+          <div class="card-img h-44 sm:h-48 bg-gradient-to-br from-navy-700 to-navy-800 relative overflow-hidden flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/80 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"/></svg>
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/20 backdrop-blur text-white text-xs font-medium">01</span>
+          </div>
+          <div class="p-5 sm:p-6 flex flex-col flex-grow">
+            <h3 class="font-display font-bold text-base sm:text-lg text-navy-900 mb-2">Dashboard Analisis Saham</h3>
+            <p class="text-xs sm:text-sm text-navy-700/80 mb-4 flex-grow">Dashboard interaktif untuk memantau pergerakan harga saham, volume, dan indikator teknikal secara real-time.</p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="tech-tag">Python</span><span class="tech-tag">Plotly</span><span class="tech-tag">SQL</span><span class="tech-tag">Power BI</span>
+            </div>
+            <div class="flex gap-2">
+              <a href="#" class="flex-1 text-center px-3 py-2 rounded-lg bg-navy-700 text-white text-xs sm:text-sm font-medium hover:bg-navy-800 transition-colors">Demo</a>
+              <a href="#" class="flex-1 text-center px-3 py-2 rounded-lg bg-navy-50 text-navy-800 text-xs sm:text-sm font-medium border border-navy-200 hover:bg-navy-100 transition-colors">Repo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal group project-card bg-white/80 backdrop-blur-sm rounded-2xl border border-navy-900/5 shadow-lg transition-all overflow-hidden flex flex-col relative">
+          <div class="card-img h-44 sm:h-48 bg-gradient-to-br from-green-700 to-green-800 relative overflow-hidden flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/80 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8c-1.657 0-3 .895-3 2s1.343 2 3 2 3 .895 3 2-1.343 2-3 2m0-8c1.11 0 2.08.402 2.599 1M12 8V7m0 1v8m0 0v1m0-1c-1.11 0-2.08-.402-2.599-1M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/20 backdrop-blur text-white text-xs font-medium">02</span>
+          </div>
+          <div class="p-5 sm:p-6 flex flex-col flex-grow">
+            <h3 class="font-display font-bold text-base sm:text-lg text-navy-900 mb-2">Portfolio Tracker Investasi</h3>
+            <p class="text-xs sm:text-sm text-navy-700/80 mb-4 flex-grow">Aplikasi tracking portofolio investasi dengan kalkulasi return, ROI, dan visualisasi alokasi aset.</p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="tech-tag">Next.js</span><span class="tech-tag">Python</span><span class="tech-tag">Chart.js</span><span class="tech-tag">Tailwind</span>
+            </div>
+            <div class="flex gap-2">
+              <a href="#" class="flex-1 text-center px-3 py-2 rounded-lg bg-navy-700 text-white text-xs sm:text-sm font-medium hover:bg-navy-800 transition-colors">Demo</a>
+              <a href="#" class="flex-1 text-center px-3 py-2 rounded-lg bg-navy-50 text-navy-800 text-xs sm:text-sm font-medium border border-navy-200 hover:bg-navy-100 transition-colors">Repo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal group project-card bg-white/80 backdrop-blur-sm rounded-2xl border border-navy-900/5 shadow-lg transition-all overflow-hidden flex flex-col relative">
+          <div class="card-img h-44 sm:h-48 bg-gradient-to-br from-blue-600 to-navy-700 relative overflow-hidden flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/80 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9"/></svg>
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/20 backdrop-blur text-white text-xs font-medium">03</span>
+          </div>
+          <div class="p-5 sm:p-6 flex flex-col flex-grow">
+            <h3 class="font-display font-bold text-base sm:text-lg text-navy-900 mb-2">Web Company Profile</h3>
+            <p class="text-xs sm:text-sm text-navy-700/80 mb-4 flex-grow">Website company profile modern dengan halaman produk, tentang, blog, dan formulir kontak responsif.</p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="tech-tag">Laravel</span><span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span><span class="tech-tag">Bootstrap</span>
+            </div>
+            <div class="flex gap-2">
+              <a href="#" class="flex-1 text-center px-3 py-2 rounded-lg bg-navy-700 text-white text-xs sm:text-sm font-medium hover:bg-navy-800 transition-colors">Demo</a>
+              <a href="#" class="flex-1 text-center px-3 py-2 rounded-lg bg-navy-50 text-navy-800 text-xs sm:text-sm font-medium border border-navy-200 hover:bg-navy-100 transition-colors">Repo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal group project-card bg-white/80 backdrop-blur-sm rounded-2xl border border-navy-900/5 shadow-lg transition-all overflow-hidden flex flex-col relative">
+          <div class="card-img h-44 sm:h-48 bg-gradient-to-br from-purple-600 to-navy-800 relative overflow-hidden flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/80 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 17v-2m3 2v-4m3 4v-6m2 10H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/20 backdrop-blur text-white text-xs font-medium">04</span>
+          </div>
+          <div class="p-5 sm:p-6 flex flex-col flex-grow">
+            <h3 class="font-display font-bold text-base sm:text-lg text-navy-900 mb-2">Sistem Analisis Data Penjualan</h3>
+            <p class="text-xs sm:text-sm text-navy-700/80 mb-4 flex-grow">Sistem end-to-end untuk analisis data penjualan: tren, segmentasi pelanggan, dan forecasting dengan Python.</p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="tech-tag">Python</span><span class="tech-tag">Pandas</span><span class="tech-tag">Tableau</span><span class="tech-tag">Excel</span>
+            </div>
+            <div class="flex gap-2">
+              <a href="#" class="flex-1 text-center px-3 py-2 rounded-lg bg-navy-700 text-white text-xs sm:text-sm font-medium hover:bg-navy-800 transition-colors">Demo</a>
+              <a href="#" class="flex-1 text-center px-3 py-2 rounded-lg bg-navy-50 text-navy-800 text-xs sm:text-sm font-medium border border-navy-200 hover:bg-navy-100 transition-colors">Repo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal group project-card bg-white/80 backdrop-blur-sm rounded-2xl border border-navy-900/5 shadow-lg transition-all overflow-hidden flex flex-col relative">
+          <div class="card-img h-44 sm:h-48 bg-gradient-to-br from-amber-600 to-navy-800 relative overflow-hidden flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/80 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/20 backdrop-blur text-white text-xs font-medium">05</span>
+          </div>
+          <div class="p-5 sm:p-6 flex flex-col flex-grow">
+            <h3 class="font-display font-bold text-base sm:text-lg text-navy-900 mb-2">Financial Report Automation</h3>
+            <p class="text-xs sm:text-sm text-navy-700/80 mb-4 flex-grow">Otomatisasi laporan keuangan bulanan: import data, generate laporan, dan kirim email otomatis.</p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="tech-tag">Python</span><span class="tech-tag">openpyxl</span><span class="tech-tag">SQL</span><span class="tech-tag">Cron</span>
+            </div>
+            <div class="flex gap-2">
+              <a href="#" class="flex-1 text-center px-3 py-2 rounded-lg bg-navy-700 text-white text-xs sm:text-sm font-medium hover:bg-navy-800 transition-colors">Demo</a>
+              <a href="#" class="flex-1 text-center px-3 py-2 rounded-lg bg-navy-50 text-navy-800 text-xs sm:text-sm font-medium border border-navy-200 hover:bg-navy-100 transition-colors">Repo</a>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal group project-card bg-white/80 backdrop-blur-sm rounded-2xl border border-navy-900/5 shadow-lg transition-all overflow-hidden flex flex-col relative">
+          <div class="card-img h-44 sm:h-48 bg-gradient-to-br from-pink-600 to-navy-800 relative overflow-hidden flex items-center justify-center">
+            <svg class="w-16 h-16 text-white/80 group-hover:scale-110 transition-transform" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"/></svg>
+            <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/20 backdrop-blur text-white text-xs font-medium">06</span>
+          </div>
+          <div class="p-5 sm:p-6 flex flex-col flex-grow">
+            <h3 class="font-display font-bold text-base sm:text-lg text-navy-900 mb-2">Personal Portfolio Website</h3>
+            <p class="text-xs sm:text-sm text-navy-700/80 mb-4 flex-grow">Website portfolio pribadi dengan tema Japanese aesthetic, fully responsive, dan animasi halus.</p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              <span class="tech-tag">HTML5</span><span class="tech-tag">Tailwind</span><span class="tech-tag">JS</span><span class="tech-tag">Vercel</span>
+            </div>
+            <div class="flex gap-2">
+              <a href="#" class="flex-1 text-center px-3 py-2 rounded-lg bg-navy-700 text-white text-xs sm:text-sm font-medium hover:bg-navy-800 transition-colors">Demo</a>
+              <a href="#" class="flex-1 text-center px-3 py-2 rounded-lg bg-navy-50 text-navy-800 text-xs sm:text-sm font-medium border border-navy-200 hover:bg-navy-100 transition-colors">Repo</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== CONTACT SECTION ============== -->
+  <section id="contact" class="relative py-20 sm:py-24 lg:py-32 px-4 sm:px-6 lg:px-8 z-10">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12 sm:mb-16 reveal">
+        <p class="font-jp text-2xl sm:text-3xl text-navy-700 mb-2">お話しましょう</p>
+        <h2 class="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-navy-900">Mari Ngobrol</h2>
+        <div class="mt-4 w-20 h-1 bg-navy-700 mx-auto rounded-full"></div>
+        <p class="mt-6 text-sm sm:text-base text-navy-700/80 max-w-xl mx-auto">
+          Punya project menarik atau mau diskusi tentang data &amp; investasi? Yuk, ngobrol!
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8">
+        <div class="reveal space-y-4">
+          <a href="https://wa.me/6283817226565" target="_blank" rel="noopener" class="flex items-center gap-4 bg-white/80 backdrop-blur-sm rounded-xl p-5 border border-navy-900/5 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center">
+              <svg class="w-6 h-6 text-green-600" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+            </div>
+            <div>
+              <p class="text-xs text-navy-700/60 font-medium uppercase tracking-wide">WhatsApp</p>
+              <p class="text-sm sm:text-base font-semibold text-navy-900">+62 838-1722-6565</p>
+            </div>
+          </a>
+
+          <a href="mailto:vayneyudha@gmail.com" class="flex items-center gap-4 bg-white/80 backdrop-blur-sm rounded-xl p-5 border border-navy-900/5 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-navy-50 flex items-center justify-center">
+              <svg class="w-6 h-6 text-navy-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </div>
+            <div>
+              <p class="text-xs text-navy-700/60 font-medium uppercase tracking-wide">Email</p>
+              <p class="text-sm sm:text-base font-semibold text-navy-900 break-all">vayneyudha@gmail.com</p>
+            </div>
+          </a>
+
+          <div class="flex items-center gap-4 bg-white/80 backdrop-blur-sm rounded-xl p-5 border border-navy-900/5 shadow-lg">
+            <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-navy-50 flex items-center justify-center">
+              <svg class="w-6 h-6 text-navy-700" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M17.657 16.657L13.414 20.9a2 2 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"/><circle cx="12" cy="11" r="2"/></svg>
+            </div>
+            <div>
+              <p class="text-xs text-navy-700/60 font-medium uppercase tracking-wide">Lokasi</p>
+              <p class="text-sm sm:text-base font-semibold text-navy-900">Subang, Jawa Barat, Indonesia</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="reveal bg-white/80 backdrop-blur-sm rounded-2xl p-6 sm:p-8 border border-navy-900/5 shadow-xl">
+          <form id="wa-form" class="space-y-4">
+            <div>
+              <label for="wa-name" class="block text-sm font-medium text-navy-700 mb-1.5">Nama</label>
+              <input type="text" id="wa-name" name="name" required placeholder="Nama lengkap kamu"
+                class="w-full px-4 py-3 rounded-xl bg-white border border-navy-200 text-navy-900 text-sm sm:text-base placeholder-navy-300 focus:outline-none focus:ring-2 focus:ring-navy-600 focus:border-transparent transition-all" />
+            </div>
+            <div>
+              <label for="wa-message" class="block text-sm font-medium text-navy-700 mb-1.5">Pesan</label>
+              <textarea id="wa-message" name="message" rows="4" required placeholder="Tulis pesan kamu di sini..."
+                class="w-full px-4 py-3 rounded-xl bg-white border border-navy-200 text-navy-900 text-sm sm:text-base placeholder-navy-300 focus:outline-none focus:ring-2 focus:ring-navy-600 focus:border-transparent transition-all resize-none"></textarea>
+            </div>
+            <button type="submit"
+              class="w-full inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-xl bg-green-600 text-white font-semibold text-sm sm:text-base hover:bg-green-700 transition-all shadow-md hover:shadow-lg hover:-translate-y-0.5">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/></svg>
+              Kirim lewat WhatsApp
+            </button>
+            <p class="text-xs text-center text-navy-700/60">Pesan akan diarahkan ke WhatsApp saya secara otomatis.</p>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============== FOOTER ============== -->
+  <footer class="relative z-10 bg-navy-900 text-white py-10 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto text-center">
+      <div class="flex items-center justify-center gap-2 mb-4">
+        <span class="font-jp text-2xl">禅</span>
+        <span class="font-display font-bold text-lg">Yudha TanuWijaya</span>
+      </div>
+      <p class="font-jp text-sm text-white/60 mb-2">一期一会 · Ichi-Go Ichi-E</p>
+      <p class="text-xs sm:text-sm text-white/50 mb-4">© 2026 Yudha TanuWijaya. All rights reserved.</p>
+      <div class="flex items-center justify-center gap-3">
+        <a href="https://github.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/60 hover:text-white transition-colors" aria-label="GitHub">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M12 0C5.374 0 0 5.373 0 12c0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23A11.509 11.509 0 0112 5.803c1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576C20.566 21.797 24 17.3 24 12c0-6.627-5.373-12-12-12z"/></svg>
+        </a>
+        <a href="https://linkedin.com" target="_blank" rel="noopener" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/60 hover:text-white transition-colors" aria-label="LinkedIn">
+          <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+        </a>
+        <a href="mailto:vayneyudha@gmail.com" class="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/60 hover:text-white transition-colors" aria-label="Email">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============== BACK TO TOP ============== -->
+  <button id="back-to-top" class="fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-40 w-11 h-11 sm:w-12 sm:h-12 rounded-full bg-navy-700 text-white shadow-lg hover:bg-navy-800 transition-all opacity-0 invisible hover:-translate-y-1 flex items-center justify-center" aria-label="Back to top">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" stroke-width="2.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M5 10l7-7m0 0l7 7m-7-7v18"/></svg>
+  </button>
+
+  <script src="script.js"></script>
+</body>
+</html>
