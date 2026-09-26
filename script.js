@@ -372,11 +372,130 @@
     initWhatsAppForm();
     initBackToTop();
     initSmoothScroll();
+    initMusicToggle();
   }
 
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', init);
   } else {
     init();
+  }
+})();
+
+/* ============================================================
+   BACKGROUND MUSIC TOGGLE
+   ============================================================ */
+(function () {
+  'use strict';
+
+  var audio = document.getElementById('bg-music');
+  var btn = document.getElementById('music-toggle');
+  var iconEl = document.getElementById('music-icon');
+  var labelEl = document.getElementById('music-label');
+  if (!audio || !btn || !iconEl || !labelEl) return;
+
+  var STORAGE_KEY = 'portfolio_music_on';
+  var VOLUME = 0.25; // 25%
+  var hasInteracted = false;
+  var playPromisePending = false;
+
+  audio.volume = VOLUME;
+
+  /* --- Update button UI --- */
+  function setUI(isOn) {
+    if (isOn) {
+      btn.classList.add('music-on');
+      btn.classList.remove('music-off');
+      iconEl.textContent = '🎵';
+      labelEl.textContent = 'Music ON';
+      btn.setAttribute('aria-pressed', 'true');
+    } else {
+      btn.classList.remove('music-on');
+      btn.classList.add('music-off');
+      iconEl.textContent = '🔇';
+      labelEl.textContent = 'Music OFF';
+      btn.setAttribute('aria-pressed', 'false');
+    }
+  }
+
+  /* --- Save preference --- */
+  function savePref(on) {
+    try {
+      localStorage.setItem(STORAGE_KEY, on ? '1' : '0');
+    } catch (e) {
+      /* localStorage might be unavailable (private mode) — fail silently */
+    }
+  }
+
+  /* --- Read preference --- */
+  function readPref() {
+    try {
+      return localStorage.getItem(STORAGE_KEY) === '1';
+    } catch (e) {
+      return false;
+    }
+  }
+
+  /* --- Attempt to play, handle autoplay policy gracefully --- */
+  function tryPlay() {
+    if (playPromisePending) return;
+    playPromisePending = true;
+    var p = audio.play();
+    if (p && typeof p.then === 'function') {
+      p.then(function () {
+        playPromisePending = false;
+        setUI(true);
+      }).catch(function () {
+        /* Browser blocked autoplay — wait for user gesture */
+        playPromisePending = false;
+        setUI(false);
+        savePref(false);
+      });
+    } else {
+      playPromisePending = false;
+      setUI(true);
+    }
+  }
+
+  /* --- Pause but keep position --- */
+  function pauseMusic() {
+    audio.pause();
+    setUI(false);
+  }
+
+  /* --- Toggle on button click --- */
+  btn.addEventListener('click', function () {
+    hasInteracted = true;
+    if (audio.paused) {
+      tryPlay();
+      savePref(true);
+    } else {
+      pauseMusic();
+      savePref(false);
+    }
+  });
+
+  /* --- On first user interaction (anywhere), try resume if pref is ON --- */
+  function onFirstInteraction() {
+    if (hasInteracted) return;
+    hasInteracted = true;
+    if (readPref()) {
+      tryPlay();
+      savePref(true);
+    }
+  }
+
+  ['click', 'touchstart', 'keydown'].forEach(function (evt) {
+    document.addEventListener(evt, onFirstInteraction, { once: true, passive: true });
+  });
+
+  /* --- Show button after a short delay so it doesn't clash with intro --- */
+  setTimeout(function () {
+    btn.classList.add('is-ready');
+  }, 600);
+
+  /* --- If user had music ON previously, try autoplay (may be blocked until interaction) --- */
+  if (readPref()) {
+    tryPlay();
   }
 })();
