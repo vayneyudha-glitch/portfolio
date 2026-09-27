@@ -311,7 +311,7 @@
     var form = document.getElementById('wa-form');
     if (!form) return;
 
-    var WHATSAPP_NUMBER = '6283817226565';
+    var WHATSAPP_NUMBER = '6283817226465';
 
     form.addEventListener('submit', function (e) {
       e.preventDefault();
