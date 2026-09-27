@@ -1,0 +1,13 @@
+# Query: 6565
+# ContextLines: 1
+
+2 results - 1 file
+
+index.html:
+  675          <div class="reveal space-y-4">
+  676:           <a href="https://wa.me/6283817226465" target="_blank" rel="noopener" class="flex items-center gap-4 bg-white/80 backdrop-blur-sm rounded-xl p-5 border border-navy-900/5 shadow-lg hover:shadow-xl hover:-translate-y-0.5 transition-all">
+  677              <div class="flex-shrink-0 w-12 h-12 rounded-xl bg-green-50 flex items-center justify-center">
+
+  681                <p class="text-xs text-navy-700/60 font-medium uppercase tracking-wide">WhatsApp</p>
+  682:               <p class="text-sm sm:text-base font-semibold text-navy-900">+62 838-1722-6465</p>
+  683              </div>
